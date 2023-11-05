@@ -169,17 +169,10 @@ const Home = ({navigation}) => {
     setisLoadinguserPosts(false);
   }, []);
 
-  // useEffect(() => {
-  //   Dimensions.addEventListener('change', result => {
-  //     setScreenData(result.screen);
 
-  //   });
-  // });
 
   return (
     <SafeAreaView style={globalStyle.backgroundWhite}>
-      {/* <StatusBar backgroundColor={'red'} barStyle={'light-content'}/> */}
-      {/* הסטטוס בר מאפשר לעצב את הסטטוס בר */}
       <View style={style.userPostContainer}>
         <FlatList
           ListHeaderComponent={
@@ -201,10 +194,9 @@ const Home = ({navigation}) => {
               </View>
               <View style={style.userStoryContainer}>
                 <FlatList
-                  onEndReachedThreshold={0.5} // ברגע שנגלול חצי מהרשימה ייטען החצי הבא, זה נותן את הטריגר לפונקציה מתחת
+                  onEndReachedThreshold={0.5} 
                   onEndReached={() => {
                     if (isLoadinguserStories) {
-                      //אם אנחנו בתהליך טעינה אז אנחנו לא רוצים לטעון עוד
                       return;
                     }
                     setisLoadinguserStories(true);
@@ -253,11 +245,10 @@ const Home = ({navigation}) => {
               imageDumensions={horizontalScale(48)}
             />
           )}
-          onEndReachedThreshold={0.5} // ברגע שנגלול חצי מהרשימה ייטען החצי הבא, זה נותן את הטריגר לפונקציה מתחת
+          onEndReachedThreshold={0.5} 
           onEndReached={() => {
             console.log('fetch page number' + userPostsCurretPage + 1);
             if (isLoadinguserPosts) {
-              //אם אנחנו בתהליך טעינה אז אנחנו לא רוצים לטעון עוד
               return;
             }
             setisLoadinguserPosts(true);

@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 const ProfileTabTitle = props => {
   return (
     <Text style={[style.title, !props.isFocused && style.titleNotFocused]}>
-      {/* זה הדרך בעצם לעשות תנאי של צבע אם משהו אמת או שקר */}
       {props.title}
     </Text>
   );

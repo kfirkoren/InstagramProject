@@ -28,9 +28,7 @@ const MainNavigation = () => {
     <Stack.Navigator
       screenOptions={{header: () => null, headerShown: false}}
       initialRouteName={Routes.Home}>
-      {/* כדי שההדר לא יופיע באף מכשיר הוספנו את הסקרין אופשיין למעלה */}
       <Stack.Screen name={'Drawer'} component={MainMeunuNavigation} />
-      {/* <Stack.Screen name={Routes.Profile} component={Profile} /> */}
     </Stack.Navigator>
   );
 };

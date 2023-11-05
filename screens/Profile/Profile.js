@@ -9,7 +9,6 @@ const Profile = ({navigation}) => {
   return (
     <SafeAreaView style={[globalStyle.backgroundWhite, globalStyle.flex]}>
       <ScrollView contentContainerStyle={globalStyle.flexGrow}>
-        {/* תמיד חשוב להוסיף את הפלקס גרו כשמתשמים בסקרול ויו כדי שהכל יותאם בצורה נכונה בתוך הסקרול וויו */}
         <View style={style.profileImageContainer}>
           <View style={style.profileImageCircle}>
             <Image
